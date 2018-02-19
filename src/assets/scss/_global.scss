@@ -60,6 +60,28 @@ h1, h2, h3, h4, h5, h6, p, ol, ul, li{
             text-align: center;
         }
     }
+
+    /* FAQ */
+    .accordions{
+        .accordion{
+            background-color: #769c41;
+
+            .accordion-item{
+
+                .accordion-title{
+                    background-color: #434343;
+
+                    &:hover{
+                        background-color: #769c41;
+                    }
+                }
+
+                .accordion-content{
+                    background-color: #769c41;
+                }
+            }
+        }
+    }
 }
 
 /* Footer */
