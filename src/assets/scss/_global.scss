@@ -60,16 +60,50 @@ h1, h2, h3, h4, h5, h6, p, ol, ul, li{
             text-align: center;
         }
     }
+    .introduction{
+        position: relative;
+
+        img{
+            display: block;
+            margin: 0 auto;
+            margin-top: 1rem;
+        }
+        h2{
+            text-align: center;
+            margin-top: 1rem;
+            color: #769c41;
+            text-shadow: 0.15rem 0.15rem rgba(0, 0, 0, 0.7);
+        }
+
+        .contact-info{
+            position: absolute;
+            top: 0.75rem;
+            right: 0;
+            h3{
+            text-align: right;
+                a{
+                    text-decoration: none;
+                    transition-duration: 0.2s;
+                    &:hover{
+                        color: #769c41;
+                    }
+                }
+        }
+        }
+        
+    }
+
+    .hr{
+        margin: 1rem 0;
+    }
 
     /* FAQ */
     .accordions{
         .accordion{
-            background-color: #769c41;
-
             .accordion-item{
-
                 .accordion-title{
                     background-color: #434343;
+                    transition-duration: 0.2s;
 
                     &:hover{
                         background-color: #769c41;
