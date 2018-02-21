@@ -87,14 +87,23 @@ ul, h3{
         }
     }
     .cta{
-        padding: 0.5rem;
+        margin-top: 1rem;
+        display: inline-block;
+        padding: 0.5rem 0.75rem;
         background-color: #769c41;
-        border: 2px solid #fff;
-        border-radius: 10px;
-
-        h4{
-            text-align: center;
-        }
+        border: 3px solid #fff;
+        border-radius: 3px;
+        text-decoration: none;  
+        min-width: 180px;   
+        text-align: center;
+        transition-duration: 0.2s;
+                    &:hover{
+                        background-color: #6f923d;
+                        box-shadow: 0.15rem 0.15rem rgba(0, 0, 0, 0.7);
+                    }  
+    }
+    #button-align-right{
+        float: right;
     }
     .introduction{
         position: relative;
@@ -146,6 +155,33 @@ ul, h3{
         }
     }
 
+    #footnote{
+
+        p{
+            text-align: center;
+            font-family: Arial, sans-serif;
+            font-weight: normal;
+            font-size: 0.8rem;
+            line-height: 1.2;
+            text-shadow: none;
+        }
+
+        #certifications-table{
+            display: table;
+            margin: 0 auto;
+
+            #certifications{
+                display: table-cell;
+                text-align: center;
+
+                img{
+                    display: inline-block;
+                    margin: 1rem 0.4rem;
+                    
+                }
+            }
+        }
+    }
     
 
     /* FAQ */
@@ -175,4 +211,14 @@ ul, h3{
 /* Footer */
 .footer{
     border-top: 6px solid #fff;
+    padding-top: 1.2rem;
+
+    p{
+        text-align: center;
+        text-shadow: none;
+        font-family: Arial, sans-serif;
+        font-weight: normal;
+        font-size: 0.8rem;
+        line-height: 1.2;
+    }
 }
