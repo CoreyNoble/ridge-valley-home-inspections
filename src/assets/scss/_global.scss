@@ -276,6 +276,30 @@ ul, h3{
     }
 }
 
+
+/* Thermal Imaging */
+
+#intro-par{
+    p{
+        padding-bottom: 0.7rem;
+    }
+}
+
+#thermal{
+    img{
+        display: block;
+    margin: 0 auto;
+    }
+}
+
+.details{
+    p{
+        &:last-child{
+            margin-bottom: 2rem;
+    }
+}
+}
+
 /* Footer */
 .footer{
     border-top: 6px solid #fff;
