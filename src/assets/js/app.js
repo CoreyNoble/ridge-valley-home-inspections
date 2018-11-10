@@ -10,3 +10,10 @@ import Foundation from 'foundation-sites';
 
 
 $(document).foundation();
+
+// Menu
+$(document).ready(function(){
+	$('#nav-icon').click(function(){
+		$(this).toggleClass('open');
+	});
+});
