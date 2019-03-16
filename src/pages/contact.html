@@ -15,48 +15,43 @@ meta-title: Contact Us | Ridge Valley Home Inspections
    
     <!-- ContactInfo -->
     <div class="row">
-        <div id="contactInfo" class="small-12 large-6 columns">
+        <div id="contactInfo" class="small-12 medium-6 columns">
             <h1>Contact Information:</h1>
             <img src="{{root}}/assets/img/contact/jamie-ruth.png" alt="Jamie Ruth Profile Picture" />
             <h3>Jamie Ruth C.H.I.</h3>
-            <h4 class="job-title">RHI Registered Home Inspector <br/> Level 1 Thermography</h4>
+            <h4 class="contact-margin-bottom">RHI Registered Home Inspector <br/> Level 1 Thermography</h4>
             <p>Direct: <a href="tel:226-929-0965" title="Call Jamie Ruth C.H.I.">226-929-0965</a></p>
-            <p>Email: <a href="mailto:jruth@ridgevalley.ca" title="Email Jamie Ruth C.H.I.">jruth@ridgevalley.ca</a></p>
-
-            <div class="hr small-12 columns">
-                <hr>
-            </div>
-            
+            <p class="contact-margin-bottom">Email: <a href="mailto:jruth@ridgevalley.ca" title="Email Jamie Ruth C.H.I.">jruth@ridgevalley.ca</a></p>
             <h4>Hours of operation:</h4>
             <p>Monday –&nbsp;Friday: 9:00am&nbsp;–&nbsp;9:00pm</p>
             <p>Saturday: 9:00am&nbsp;-&nbsp;9:00pm</p>
             <p>Sunday: 9:00am&nbsp;-&nbsp;9:00pm</p>
         </div>
 
-        <div id="contactForm" class="small-12 large-6 columns">
+        <div id="contactForm" class="small-12 medium-6 columns">
             <h3>Send an Inquiry:</h3>
 
             <form id="contact" action="" method="post">
                 <fieldset>
-                    <input placeholder="Your name" type="text" tabindex="1" required autofocus>
+                    <input placeholder="Your name*" type="text" maxlength="50" tabindex="0" required autofocus>
                 </fieldset>
                 <fieldset>
-                    <input placeholder="Your email address" type="email" tabindex="2" required>
+                    <input placeholder="Your email address*" type="email" maxlength="70" tabindex="0" required>
                 </fieldset>
                 <fieldset>
-                    <input placeholder="Your phone number" type="tel" tabindex="3">
+                    <input placeholder="Your phone number" type="tel" maxlength="40" tabindex="0">
                 </fieldset>
                 <fieldset>
-                    <input placeholder="Address to be inspected" type="text" tabindex="1" required>
+                    <input placeholder="Address to be inspected*" type="text" maxlength="70" tabindex="0" required>
                 </fieldset>
                 <fieldset>
-                    <input placeholder="Real estate agent" type="text" tabindex="1">
+                    <input placeholder="Real estate agent" type="text" maxlength="50" tabindex="0">
                 </fieldset>
                 <fieldset>
-                    <textarea placeholder="Details about your inquiry" tabindex="5" required></textarea>
+                    <textarea placeholder="Details about your inquiry" maxlength="1250" tabindex="0"></textarea>
                 </fieldset>
                 <fieldset>
-                    <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
+                    <button class="cta" name="submit" type="submit" data-submit="...Sending" tabindex="0">Submit</button>
                 </fieldset>
             </form>
 
