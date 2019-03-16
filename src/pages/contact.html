@@ -8,45 +8,75 @@ meta-title: Contact Us | Ridge Valley Home Inspections
 
      <div class="row">
         <div class="top-hr hr small-12 columns">
-                <hr>
+            <hr>
         </div>
      </div>
 
    
-
     <!-- ContactInfo -->
     <div class="row">
         <div id="contactInfo" class="small-12 large-6 columns">
-            <h1>Contact</h1>
-            <p>Jamie Ruth C.H.I.</p>
-            <p>Cell: <a href="tel:226-929-0965" title="Call Jamie Ruth C.H.I.">226-929-0965</a></p>
-            <p>Email: <a href="mailto:jruth@ridgevalley.ca" title="Email Jamie Ruth C.H.I.">jruth@ridgevalley.ca</a></p>	
-            <p>Hours of operation:</p>
-            <p>Monday –&nbsp;Friday 9:00am –&nbsp;9:00pm</p>
-            <p>Saturday 9:00am -&nbsp;9:00pm</p>
-            <p>Sunday 9:00am -&nbsp;9:00pm</p>
-        </div>
-        
-        <div class="small-12 large-6 columns">
-            <img src="{{root}}/assets/img/contact/jamie-ruth.png" alt="Jamie Ruth Profile Picture" />    
-        </div>
+            <h1>Contact Information:</h1>
+            <img src="{{root}}/assets/img/contact/jamie-ruth.png" alt="Jamie Ruth Profile Picture" />
+            <h3>Jamie Ruth C.H.I.</h3>
+            <h4 class="job-title">RHI Registered Home Inspector <br/> Level 1 Thermography</h4>
+            <p>Direct: <a href="tel:226-929-0965" title="Call Jamie Ruth C.H.I.">226-929-0965</a></p>
+            <p>Email: <a href="mailto:jruth@ridgevalley.ca" title="Email Jamie Ruth C.H.I.">jruth@ridgevalley.ca</a></p>
 
-    </div>
-    <!-- Line Break -->
-    <div class="row">
             <div class="hr small-12 columns">
-                    <hr>
+                <hr>
             </div>
-    </div>
-
-    <!-- Coverage -->
-    <div class="row">
-        <div class="coverage small-12 columns">
-            <img src="{{root}}/assets/img/contact/map.png" alt="Coverage Map" />
+            
+            <h4>Hours of operation:</h4>
+            <p>Monday –&nbsp;Friday: 9:00am&nbsp;–&nbsp;9:00pm</p>
+            <p>Saturday: 9:00am&nbsp;-&nbsp;9:00pm</p>
+            <p>Sunday: 9:00am&nbsp;-&nbsp;9:00pm</p>
         </div>
 
+        <div id="contactForm" class="small-12 large-6 columns">
+            <h3>Send an Inquiry:</h3>
+
+            <form id="contact" action="" method="post">
+                <fieldset>
+                    <input placeholder="Your name" type="text" tabindex="1" required autofocus>
+                </fieldset>
+                <fieldset>
+                    <input placeholder="Your email address" type="email" tabindex="2" required>
+                </fieldset>
+                <fieldset>
+                    <input placeholder="Your phone number" type="tel" tabindex="3">
+                </fieldset>
+                <fieldset>
+                    <input placeholder="Address to be inspected" type="text" tabindex="1" required>
+                </fieldset>
+                <fieldset>
+                    <input placeholder="Real estate agent" type="text" tabindex="1">
+                </fieldset>
+                <fieldset>
+                    <textarea placeholder="Details about your inquiry" tabindex="5" required></textarea>
+                </fieldset>
+                <fieldset>
+                    <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
+                </fieldset>
+            </form>
+
+            <img src="{{root}}/assets/img/contact/map.png" alt="Coverage Map" />   
+        </div>
     </div>
 
+    <div class="row">
+        <div class="hr small-12 columns">
+            <hr>
+        </div>
+    </div>
+
+    <div class="row home-gague-ratings">
+        <div class="small-12 columns">
+            <img src="{{root}}/assets/img/shared/HomeGauge.png" alt="Home Gague"/>
+            <a class="cta" href="https://www.homegauge.com/shgi/baselineinspections/" title="View live ratings on Home Gague" target="_blank"><h4>View live ratings on Home Gague</h4></a>
+        </div>
+        <p>&nbsp;</p>
+    </div>
 </main>
 
 {{> footer}}

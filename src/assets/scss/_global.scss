@@ -8,7 +8,7 @@ h1, h2, h3, h4, h5, h6, p, ol, ul, li{
     color: #fff;
 }
 
-h1, h3{
+h1, h3, h4{
     text-shadow: 0.1rem 0.1rem rgba(0, 0, 0, 0.5);
 }
 
@@ -19,6 +19,11 @@ h1{
 
 h3{
     font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+}
+
+h4{
+    font-size: 1.15rem;
     margin-bottom: 0.75rem;
 }
 
@@ -256,7 +261,7 @@ left: 8px;
         border: 3px solid #fff;
         border-radius: 3px;
         text-decoration: none;  
-        min-width: 180px;   
+        min-width: 180px;
         text-align: center;
         transition-duration: 0.2s;
 
@@ -267,6 +272,12 @@ left: 8px;
         
         @include breakpoint(small down){
             display: block;
+        }
+
+        h4{
+            margin-bottom: 0;
+            text-shadow: unset;
+            font-size: 1rem;
         }
     }
     #button-align-right{
@@ -299,8 +310,6 @@ left: 8px;
             @include breakpoint(medium down) {
                 position: relative;
                 margin-bottom: 0.75rem;
-                
-                
             }
 
             h3{
@@ -316,7 +325,7 @@ left: 8px;
                         border-bottom: 2px solid #769c41;
                     }
                 }
-        }
+            }
         }
         
     }
@@ -363,6 +372,24 @@ left: 8px;
     }
     
     /* Contact */
+    #contactInfo{
+        img{
+            display: block;
+            margin: 0;
+            margin-bottom: 1rem;
+        }
+
+        .hr{
+            padding: 0;
+            margin: 1rem auto;
+            margin-bottom: 1.5rem;
+        }
+
+        h4.job-title{
+            margin-bottom: 2rem;
+        }
+    }
+    
     .coverage{
         img{
             display: block;
@@ -472,6 +499,25 @@ left: 8px;
                     }
                 }
             }
+        }
+    }
+}
+
+/* Home Gague Rating */
+.home-gague-ratings{
+    img{
+        background-color: #fff;
+    }
+
+    .cta{
+        margin: 0 auto;
+        display: block;
+        max-width: 18rem;
+        width: 100%;
+        margin-top: 1.25rem;
+
+        @include breakpoint(small down){
+            max-width: unset;
         }
     }
 }
