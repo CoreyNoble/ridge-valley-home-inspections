@@ -288,13 +288,14 @@ left: 4px;
             cursor: pointer;
         }
         
-        @include breakpoint(small down){
+        @include breakpoint(medium down){
             display: block;
+            width: 100%;
         }
     }
     #button-align-right{
         float: right;
-        @include breakpoint(small down){
+        @include breakpoint(medium down){
             float: none!important;
         }
     }
@@ -587,7 +588,7 @@ left: 4px;
         width: 100%;
         margin-top: 1.25rem;
 
-        @include breakpoint(small down){
+        @include breakpoint(medium down){
             max-width: unset;
         }
     }
