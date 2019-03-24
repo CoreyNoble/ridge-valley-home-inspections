@@ -31,27 +31,27 @@ meta-title: Contact Us | Ridge Valley Home Inspections
         <div id="contactForm" class="small-12 medium-6 columns">
             <h3>Send an Inquiry:</h3>
 
-            <form id="contact" action="" method="post">
+            <form id="contact" action="mail.php" method="post">
                 <fieldset>
-                    <input placeholder="Your name*" type="text" maxlength="50" tabindex="0" required autofocus>
+                    <input placeholder="Your name*" name="name" type="text" maxlength="50" tabindex="0" required autofocus>
                 </fieldset>
                 <fieldset>
-                    <input placeholder="Your email address*" type="email" maxlength="70" tabindex="0" required>
+                    <input placeholder="Your email address*" name="email" type="email" maxlength="70" tabindex="0" required>
                 </fieldset>
                 <fieldset>
-                    <input placeholder="Your phone number" type="tel" maxlength="40" tabindex="0">
+                    <input placeholder="Your phone number" name="phone" type="tel" maxlength="40" tabindex="0">
                 </fieldset>
                 <fieldset>
-                    <input placeholder="Address to be inspected*" type="text" maxlength="70" tabindex="0" required>
+                    <input placeholder="Address to be inspected*" name="address" type="text" maxlength="70" tabindex="0" required>
                 </fieldset>
                 <fieldset>
-                    <input placeholder="Real estate agent" type="text" maxlength="50" tabindex="0">
+                    <input placeholder="Real estate agent" name="agent" type="text" maxlength="50" tabindex="0">
                 </fieldset>
                 <fieldset>
-                    <textarea placeholder="Details about your inquiry" maxlength="1250" tabindex="0"></textarea>
+                    <textarea placeholder="Details about your inquiry" name="details" maxlength="1250" tabindex="0"></textarea>
                 </fieldset>
                 <fieldset>
-                    <button class="cta" name="submit" type="submit" data-submit="...Sending" tabindex="0">Submit</button>
+                    <button id="contact-form" class="cta g-recaptcha" name="submit" type="submit" data-submit="...Sending" tabindex="0" data-sitekey="6LdKrJkUAAAAAPwj-dyxQ88IwhKIEqihVeCpatx7" data-callback='onSubmit'>Submit</button>
                 </fieldset>
             </form>
 
@@ -75,3 +75,11 @@ meta-title: Contact Us | Ridge Valley Home Inspections
 </main>
 
 {{> footer}}
+
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+<script>
+    function onSubmit(token) {
+      document.getElementById("contact-form").submit();
+    }
+  </script>
