@@ -493,9 +493,17 @@ left: 4px;
         width: 67%;
         margin: 0 auto;
 
+        @media screen and (max-width: 1210px){
+            width: 100%;
+        }
+
         img{
             float: left;
             margin-bottom: 2rem;
+
+            @media screen and (max-width: 1210px){
+                float: none;
+            }
         }
 
         #gauge-camera{
@@ -504,8 +512,20 @@ left: 4px;
 
             padding-left: 2rem;
 
+            @media screen and (max-width: 1210px){
+                display: block;
+                float: none;
+                padding: 0;
+            }
+
             img{
                 clear: both;
+
+                @media screen and (max-width: 1210px){
+                    display: block;
+                    margin: 0 auto;
+                    margin-bottom: 2rem;
+                }
             }
         }
 
