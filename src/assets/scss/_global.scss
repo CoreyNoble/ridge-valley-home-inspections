@@ -590,7 +590,14 @@ left: 4px;
                         text-shadow: none;
                     }
                 }
-            }
+
+                &.is-active{
+                    a.accordion-title{
+                        background-color: darken(#769c41, 15%);
+                        color: #fff;
+                    }
+                }
+            }            
         }
     }
 }
