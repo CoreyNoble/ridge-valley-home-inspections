@@ -8,45 +8,87 @@ meta-title: Contact Us | Ridge Valley Home Inspections
 
      <div class="row">
         <div class="top-hr hr small-12 columns">
-                <hr>
+            <hr>
         </div>
      </div>
 
    
-
     <!-- ContactInfo -->
     <div class="row">
-        <div id="contactInfo" class="small-12 large-6 columns">
-            <h1>Contact</h1>
-            <p>Jamie Ruth C.H.I.</p>
-            <p>Cell: <a href="tel:226-929-0965" title="Call Jamie Ruth C.H.I.">226-929-0965</a></p>
-            <p>Email: <a href="mailto:jruth@ridgevalley.ca" title="Email Jamie Ruth C.H.I.">jruth@ridgevalley.ca</a></p>	
-            <p>Hours of operation:</p>
-            <p>Monday –&nbsp;Friday 9:00am –&nbsp;9:00pm</p>
-            <p>Saturday 9:00am -&nbsp;9:00pm</p>
-            <p>Sunday 9:00am -&nbsp;9:00pm</p>
-        </div>
-        
-        <div class="small-12 large-6 columns">
-            <img src="{{root}}/assets/img/contact/jamie-ruth.png" alt="Jamie Ruth Profile Picture" />    
+        <div id="contactInfo" class="small-12 medium-6 columns">
+            <h1>Contact Information</h1>
+            <img src="{{root}}/assets/img/contact/jamie-ruth.png" alt="Jamie Ruth Profile Picture" />
+            <h3>Jamie Ruth C.H.I.</h3>
+            <h4 class="contact-margin-bottom">RHI Registered Home Inspector <br/> Level 1 Thermography</h4>
+            <p>Direct: <a href="tel:226-929-0965" title="Call Jamie Ruth C.H.I.">226-929-0965</a></p>
+            <p class="contact-margin-bottom">Email: <a href="mailto:jruth@ridgevalley.ca" title="Email Jamie Ruth C.H.I.">jruth@ridgevalley.ca</a></p>
+            <h4>Hours of operation:</h4>
+            <p>Monday –&nbsp;Friday: 9:00am&nbsp;–&nbsp;9:00pm</p>
+            <p>Saturday: 9:00am&nbsp;-&nbsp;9:00pm</p>
+            <p>Sunday: 9:00am&nbsp;-&nbsp;9:00pm</p>
         </div>
 
-    </div>
-    <!-- Line Break -->
-    <div class="row">
+        <div class="row show-for-small-only">
             <div class="hr small-12 columns">
-                    <hr>
+                <hr>
             </div>
+        </div>
+
+        <div id="contactForm" class="small-12 medium-6 columns">
+            <h3>Send an Inquiry</h3>
+
+            <form id="contact" action="{{root}}mail.php" method="post">
+                <label for="name"><h4>Name*</h4></label>
+                <input placeholder="Enter your name*" name="name" type="text" maxlength="50" tabindex="0" required autofocus>
+                <label for="email"><h4>Email address*</h4></label>
+                <input placeholder="Enter your email address*" name="email" type="email" maxlength="70" tabindex="0" required>
+                <label for="phone"><h4>Phone number</h4></label>
+                <input placeholder="Enter your phone number" name="phone" type="tel" maxlength="40" tabindex="0">
+                <label for="address"><h4>Address to be inspected*</h4></label>
+                <input placeholder="Enter the address to be inspected*" name="address" type="text" maxlength="70" tabindex="0" required>
+                <label for="agent"><h4>Real estate agent</h4></label>
+                <input placeholder="Enter the real estate agent" name="agent" type="text" maxlength="50" tabindex="0">
+                <label for="details"><h4>Details</h4></label>
+                <textarea placeholder="Enter details about your inquiry" name="details" maxlength="1250" tabindex="0"></textarea>
+                <button id="contact-form" class="cta g-recaptcha" name="submit" type="submit" tabindex="0" data-sitekey="6LdKrJkUAAAAAPwj-dyxQ88IwhKIEqihVeCpatx7" data-callback='onSubmit'>Submit</button>
+            </form>
+        </div>
     </div>
 
-    <!-- Coverage -->
     <div class="row">
-        <div class="coverage small-12 columns">
+        <div class="hr small-12 columns">
+            <hr>
+        </div>
+    </div>
+
+    <div class="row" id="coverage">
+        <div class="small-12 columns">
+            <h3 style="text-align: center;">Coverage</h3>
             <img src="{{root}}/assets/img/contact/map.png" alt="Coverage Map" />
         </div>
-
     </div>
 
+    <div class="row">
+        <div class="hr small-12 columns">
+            <hr>
+        </div>
+    </div>
+
+    <div class="row home-gague-ratings">
+        <div class="small-12 columns">
+            <img src="{{root}}/assets/img/shared/HomeGauge.png" alt="Home Gague"/>
+            <a class="cta" href="https://www.homegauge.com/shgi/baselineinspections/" title="View live ratings on Home Gague" target="_blank">View live ratings on Home Gague</a>
+        </div>
+        <p>&nbsp;</p>
+    </div>
 </main>
 
 {{> footer}}
+
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+<script>
+    function onSubmit(token) {
+        document.getElementById("contact-form").submit();
+    }
+</script>
