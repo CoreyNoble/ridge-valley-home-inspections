@@ -16,7 +16,7 @@ meta-title: Contact Us | Ridge Valley Home Inspections
     <!-- ContactInfo -->
     <div class="row">
         <div id="contactInfo" class="small-12 medium-6 columns">
-            <h1>Contact Information:</h1>
+            <h1>Contact Information</h1>
             <img src="{{root}}/assets/img/contact/jamie-ruth.png" alt="Jamie Ruth Profile Picture" />
             <h3>Jamie Ruth C.H.I.</h3>
             <h4 class="contact-margin-bottom">RHI Registered Home Inspector <br/> Level 1 Thermography</h4>
@@ -35,30 +35,22 @@ meta-title: Contact Us | Ridge Valley Home Inspections
         </div>
 
         <div id="contactForm" class="small-12 medium-6 columns">
-            <h3>Send an Inquiry:</h3>
+            <h3>Send an Inquiry</h3>
 
-            <form id="contact" action="mail.php" method="post">
-                <fieldset>
-                    <input placeholder="Your name*" name="name" type="text" maxlength="50" tabindex="0" required autofocus>
-                </fieldset>
-                <fieldset>
-                    <input placeholder="Your email address*" name="email" type="email" maxlength="70" tabindex="0" required>
-                </fieldset>
-                <fieldset>
-                    <input placeholder="Your phone number" name="phone" type="tel" maxlength="40" tabindex="0">
-                </fieldset>
-                <fieldset>
-                    <input placeholder="Address to be inspected*" name="address" type="text" maxlength="70" tabindex="0" required>
-                </fieldset>
-                <fieldset>
-                    <input placeholder="Real estate agent" name="agent" type="text" maxlength="50" tabindex="0">
-                </fieldset>
-                <fieldset>
-                    <textarea placeholder="Details about your inquiry" name="details" maxlength="1250" tabindex="0"></textarea>
-                </fieldset>
-                <fieldset>
-                    <button id="contact-form" class="cta g-recaptcha" name="submit" type="submit" data-submit="...Sending" tabindex="0" data-sitekey="6LdKrJkUAAAAAPwj-dyxQ88IwhKIEqihVeCpatx7" data-callback='onSubmit'>Submit</button>
-                </fieldset>
+            <form id="contact" action="{{root}}mail.php" method="post">
+                <label for="name"><h4>Name*</h4></label>
+                <input placeholder="Enter your name*" name="name" type="text" maxlength="50" tabindex="0" required autofocus>
+                <label for="email"><h4>Email address*</h4></label>
+                <input placeholder="Enter your email address*" name="email" type="email" maxlength="70" tabindex="0" required>
+                <label for="phone"><h4>Phone number</h4></label>
+                <input placeholder="Enter your phone number" name="phone" type="tel" maxlength="40" tabindex="0">
+                <label for="address"><h4>Address to be inspected*</h4></label>
+                <input placeholder="Enter the address to be inspected*" name="address" type="text" maxlength="70" tabindex="0" required>
+                <label for="agent"><h4>Real estate agent</h4></label>
+                <input placeholder="Enter the real estate agent" name="agent" type="text" maxlength="50" tabindex="0">
+                <label for="details"><h4>Details</h4></label>
+                <textarea placeholder="Enter details about your inquiry" name="details" maxlength="1250" tabindex="0"></textarea>
+                <button id="contact-form" class="cta g-recaptcha" name="submit" type="submit" tabindex="0" data-sitekey="6LdKrJkUAAAAAPwj-dyxQ88IwhKIEqihVeCpatx7" data-callback='onSubmit'>Submit</button>
             </form>
         </div>
     </div>
@@ -85,7 +77,7 @@ meta-title: Contact Us | Ridge Valley Home Inspections
     <div class="row home-gague-ratings">
         <div class="small-12 columns">
             <img src="{{root}}/assets/img/shared/HomeGauge.png" alt="Home Gague"/>
-            <button class="cta" href="https://www.homegauge.com/shgi/baselineinspections/" title="View live ratings on Home Gague" target="_blank">View live ratings on Home Gague</button>
+            <a class="cta" href="https://www.homegauge.com/shgi/baselineinspections/" title="View live ratings on Home Gague" target="_blank">View live ratings on Home Gague</a>
         </div>
         <p>&nbsp;</p>
     </div>
@@ -97,6 +89,6 @@ meta-title: Contact Us | Ridge Valley Home Inspections
 
 <script>
     function onSubmit(token) {
-      document.getElementById("contact-form").submit();
+        document.getElementById("contact-form").submit();
     }
-  </script>
+</script>

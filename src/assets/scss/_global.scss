@@ -269,7 +269,7 @@ left: 4px;
     .cta{
         margin-top: 1rem;
         display: inline-block;
-        padding: 0.66rem;
+        padding: 0.5rem 0.66rem;
         background-color: #769c41;
         border: 3px solid #fff;
         border-radius: 3px;
@@ -286,6 +286,7 @@ left: 4px;
             background-color: lighten(#769c41, 7.5%);
             box-shadow: 0.1rem 0.1rem rgba(0, 0, 0, 0.5);
             cursor: pointer;
+            color: #fff;
         }
         
         @include breakpoint(medium down){
@@ -404,15 +405,9 @@ left: 4px;
     }
 
     /* Contact Form */
-    fieldset {
-        border: medium none !important;
-        margin: 0 0 10px;
-        min-width: 100%;
-        padding: 0;
-        width: 100%;
-
-        &:last-child{
-            margin-bottom: 0;
+    #contact label{
+        h4{
+            margin-bottom: 0.25rem;
         }
     }
 
@@ -422,6 +417,7 @@ left: 4px;
         background:#FFF;
         margin:0 0 5px;
         padding:10px;
+        margin-bottom: 1rem;
     }
 
     #contact input[type="text"]:hover, #contact input[type="email"]:hover, #contact input[type="tel"]:hover, #contact input[type="url"]:hover, #contact textarea:hover {
