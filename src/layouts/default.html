@@ -8,11 +8,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{meta-title}}</title>
     <link rel="stylesheet" href="{{root}}assets/css/app.css">
+    <link rel="icon" href="{{root}}favicon.ico" />
   </head>
   <body>
 
-    {{!-- Pages you create in the src/pages/ folder are inserted here when the flattened page is created. --}}
-    {{> body}}
+  {{> header}}
+
+  <div class="off-canvas-wrapper">
+    <div class="off-canvas position-right" id="offCanvas" data-off-canvas>
+      <!-- Your menu or Off-canvas content goes here -->
+      <nav class="navigation">
+          <div class="header-logo">
+              <a href="{{root}}/" title="Ridge Valley Home Inspections"><img src="{{root}}/assets/img/ridge-valley-home-inspections-logo-nav.png" alt="Ridge Valley Home Inspections"/></a>
+          </div>
+
+          <ul>
+              <li><a href="{{root}}frequently-asked-questions.html" title="View Answers to our Most Frequently Asked Questions">F.A.Q.</a></li>
+              <li><a href="{{root}}contact.html" title="Contact Us">Contact</a></li>
+              <li><a href="{{root}}thermal-imaging.html" title="About Thermal Imaging">Thermal&nbsp;Imaging</a></li>
+              <li><a href="{{root}}services.html" title="Our Services">Services</a></li>
+              <li><a href="{{root}}document-library.html" title="View our Document Library">Document&nbsp;Library</a></li>
+          </ul>
+      </nav>
+      <button class="close-button hide-for-large" aria-label="Close menu" type="button" data-close>
+        <button id="nav-icon" type="button" class="button hide-for-large open" data-toggle="offCanvas" aria-expanded="false" aria-controls="offCanvas">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </button>
+    </div>
+    <div class="off-canvas-content" data-off-canvas-content>
+      <!-- Your page content lives here -->
+      {{!-- Pages you create in the src/pages/ folder are inserted here when the flattened page is created. --}}
+      {{> body}}
+    </div>
+  </div>
 
     <script src="{{root}}assets/js/app.js"></script>
   </body>
