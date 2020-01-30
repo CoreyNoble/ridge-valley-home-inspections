@@ -52,9 +52,9 @@
 // @include motion-ui-transitions;
 // @include motion-ui-animations;
 
-/* Global Styles */
+/* Imports */
 @import 'global';
 @import 'components/navigation';
 @import 'components/footer';
-
-/* Page Styles */
+@import 'components/accordion';
+@import 'components/ratings';

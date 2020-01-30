@@ -4,6 +4,10 @@
   padding: 0;
 }
 
+body{
+  background-color: #fff;
+}
+
 h1,
 h2,
 h3,
@@ -15,6 +19,7 @@ ol,
 ul,
 li {
   color: #666;
+  line-height: 1.2;
   font-family: 'Open Sans', Arial, sans-serif;
 }
 
@@ -50,8 +55,8 @@ li {
   color: #75a442;
 }
 
-.header,
-.footer {
+header,
+footer {
   background-color: #666;
 }
 
@@ -63,8 +68,14 @@ h3.small-margin-top {
 
 /* Container */
 .container {
+  margin-top: 6.5rem;
+  margin-bottom: 3.133rem;
   background-color: #fff;
-  min-height: 86.3vh;
+  min-height: calc(100vh - 9.66rem);
+
+  @include breakpoint(medium down) {
+    margin-bottom: 4.05rem;
+  }
 
   img,
   a {
@@ -72,7 +83,7 @@ h3.small-margin-top {
   }
 
   a {
-    transition: all 0.2s;
+    transition: all 0.2s ease;
 
     &:hover {
       color: lighten(#75a442, 15%);
@@ -109,6 +120,7 @@ h3.small-margin-top {
     font-size: 1.15rem;
     color: #fff;
     margin-bottom: 0;
+    transition: all 0.3s ease;
 
     &:hover, &:focus {
       background-color: #456222;
@@ -129,18 +141,20 @@ h3.small-margin-top {
   }
   #button-align-right {
     float: right;
+    
     @include breakpoint(medium down) {
       float: none !important;
     }
   }
+
   .introduction {
     position: relative;
 
     img {
       display: block;
       margin: 0 auto;
-      margin-top: 1rem;
     }
+
     h2 {
       text-align: center;
       margin-top: 1rem;
@@ -149,18 +163,28 @@ h3.small-margin-top {
 
     .contact-info {
       position: absolute;
-      top: 0.75rem;
+      top: 0;
       right: 0;
       padding-right: 0.65rem;
 
-      @include breakpoint(medium down) {
+      @include breakpoint(940px down) {
         position: relative;
+        display: block;
+        top: unset;
+        right: unset;
+        margin-top: 10.5rem;
         margin-bottom: 0.75rem;
       }
 
       h3 {
         text-align: right;
         margin-bottom: 0;
+
+        @include breakpoint(940px down) {
+          text-align: center;
+          font-size: 1.25rem;
+        }
+
         a {
           text-decoration: none;
           transition: color;
@@ -358,87 +382,6 @@ h3.small-margin-top {
           margin-bottom: 2rem;
         }
       }
-    }
-  }
-
-  /* FAQ */
-  #faq-img {
-    img {
-      display: block;
-      margin: 0 auto;
-    }
-  }
-  .accordions {
-    margin-bottom: 1.5rem;
-    .accordion {
-      padding-left: 0;
-      .accordion-item {
-        margin-bottom: 0.5rem;
-
-        &:last-child{
-          margin-bottom: 0;
-        }
-        
-        a {
-          text-decoration: none;
-        }
-
-        .accordion-title {
-          background-color: #456222;
-          color: #fff;
-          transition-duration: 0.2s;
-
-          &:before {
-            font-size: 1.75rem;
-            top: 40%;
-          }
-
-          h3 {
-            color: #fff;
-            margin-bottom: 0;
-            font-size: 1.2rem;
-            font-weight: normal;
-          }
-
-          &:hover {
-            background-color: #597D2D;
-          }
-        }
-
-        .accordion-content {
-          border: 0.1rem solid #597D2D;
-          box-sizing: border-box;
-            -moz-box-sizing: border-box;
-            -webkit-box-sizing: border-box;
-
-          p, ul, ol {
-            &:last-child {
-              margin-bottom: 0;
-            }
-          }
-        }
-
-        &.is-active {
-          a.accordion-title {
-            background-color: #597D2D;
-          }
-        }
-      }
-    }
-  }
-}
-
-/* Home Gague Rating */
-.home-gague-ratings {
-  .cta {
-    margin: 0 auto;
-    display: block;
-    max-width: 24rem;
-    width: 100%;
-    margin-top: 1.25rem;
-
-    @include breakpoint(medium down) {
-      max-width: unset;
     }
   }
 }
