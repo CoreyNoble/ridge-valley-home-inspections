@@ -22,8 +22,8 @@ if (!$captcha || $response.success == false) {
         if (!$email) {
             echo "Invalid email address";
         } else {
-            $to = "coreynoble@hotmail.ca"; // REPLACE!
-            $subject = "Inquiry | Ridge Valley";
+            $to = "jruth@ridgevalley.ca";
+            $subject = "Inquiry | Ridge Valley Home Inspections";
             $headers = 'From:' . $email . "\r\n";
 
             $name = $_POST['name'];

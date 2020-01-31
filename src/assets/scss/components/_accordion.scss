@@ -1,0 +1,59 @@
+.accordions {
+  margin-bottom: 1.5rem;
+  .accordion {
+    padding-left: 0;
+    .accordion-item {
+      margin-bottom: 0.5rem;
+
+      &:last-child{
+        margin-bottom: 0;
+      }
+      
+      a {
+        text-decoration: none;
+      }
+
+      .accordion-title {
+        background-color: #456222;
+        color: #fff;
+        transition-duration: 0.2s;
+        padding-right: 2.5rem;
+
+        &:before {
+          font-size: 1.75rem;
+          top: 40%;
+        }
+
+        h3 {
+          color: #fff;
+          margin-bottom: 0;
+          font-size: 1.2rem;
+          font-weight: normal;
+        }
+
+        &:hover {
+          background-color: #597D2D;
+        }
+      }
+
+      .accordion-content {
+        border: 0.1rem solid #597D2D;
+        box-sizing: border-box;
+          -moz-box-sizing: border-box;
+          -webkit-box-sizing: border-box;
+
+        p, ul, ol {
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+
+      &.is-active {
+        a.accordion-title {
+          background-color: #597D2D;
+        }
+      }
+    }
+  }
+}

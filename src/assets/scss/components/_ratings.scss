@@ -1,0 +1,26 @@
+.home-gauge-ratings {
+  .homegauge-logo{
+    margin-bottom: 1.33rem;
+  }
+
+  .cta {
+    margin: 0 auto;
+    display: block;
+    max-width: 24rem;
+    width: 100%;
+    margin-top: 1.25rem;
+
+    @include breakpoint(medium down) {
+      max-width: unset;
+    }
+  }
+}
+
+#HGTestimonialsWide9254{
+  display: block;
+  width: 100%!important;
+
+  div {
+    margin: 0 auto;
+  }
+}

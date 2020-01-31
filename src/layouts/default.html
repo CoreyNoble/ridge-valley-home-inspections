@@ -7,8 +7,14 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{meta-title}}</title>
-    <link rel="stylesheet" href="{{root}}assets/css/app.css">
-    <link rel="icon" href="{{root}}favicon.ico" />
+    <meta name="description" content="{{meta-description}}"/>
+    {{#ifpage 'success' 'failed'}}
+    <meta name="robots" content="noindex">
+    {{/ifpage}}
+    <link href="{{canonical}}" rel="canonical" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" rel="stylesheet">
+    <link href="{{root}}assets/css/app.css" rel="stylesheet">
+    <link href="{{root}}/favicon.ico" rel="icon" />
   </head>
   <body>
 
@@ -19,12 +25,12 @@
       <!-- Your menu or Off-canvas content goes here -->
       <nav class="navigation">
           <div class="header-logo">
-              <a href="{{root}}/" title="Ridge Valley Home Inspections"><img src="{{root}}/assets/img/ridge-valley-home-inspections-logo-nav.png" alt="Ridge Valley Home Inspections"/></a>
+              <a href="{{root}}/" title="Ridge Valley Home Inspections"><img src="{{root}}/assets/img/ridge-valley/ridge-valley-home-inspections-logo-nav.png" alt="Ridge Valley Home Inspections"/></a>
           </div>
 
           <ul>
-              <li><a href="{{root}}frequently-asked-questions.html" title="View Answers to our Most Frequently Asked Questions">F.A.Q.</a></li>
               <li><a href="{{root}}contact.html" title="Contact Us">Contact</a></li>
+              <li><a href="{{root}}frequently-asked-questions.html" title="View Answers to our Most Frequently Asked Questions">F.A.Q.</a></li>
               <li><a href="{{root}}thermal-imaging.html" title="About Thermal Imaging">Thermal&nbsp;Imaging</a></li>
               <li><a href="{{root}}services.html" title="Our Services">Services</a></li>
               <li><a href="{{root}}document-library.html" title="View our Document Library">Document&nbsp;Library</a></li>
@@ -45,6 +51,6 @@
     </div>
   </div>
 
-    <script src="{{root}}assets/js/app.js"></script>
+    <script src="{{root}}assets/js/app.js" defer></script>
   </body>
 </html>
