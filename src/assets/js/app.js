@@ -10,3 +10,11 @@ import Foundation from 'foundation-sites';
 
 
 $(document).foundation();
+
+const openHomeGaugeModal = () => {
+  const homeGaugeReviewsModal = document.getElementById('HGPopupWide9254');
+  homeGaugeReviewsModal.style.setProperty('display','block','');
+}
+
+const homeGaugeCTA = document.getElementById('HGTestimonialsCTA');
+homeGaugeCTA.addEventListener('click', openHomeGaugeModal);
