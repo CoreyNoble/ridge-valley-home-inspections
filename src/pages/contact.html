@@ -27,17 +27,17 @@ canonical: https://ridgevalley.ca/contact.html
         <div id="contactForm" class="small-12 medium-6 columns">
             <h3>Send an Inquiry</h3>
 
-            <form id="contact" action="{{root}}mail.php" method="post">
+            <form id="contact" action="{{root}}mailsend.php" method="post">
                 <label for="name"><h4>Name*</h4></label>
                 <input placeholder="Enter your name*" name="name" type="text" maxlength="50" tabindex="0" required autofocus>
                 <label for="email"><h4>Email address*</h4></label>
                 <input placeholder="Enter your email address*" name="email" type="email" maxlength="70" tabindex="0" required>
-                <label for="phone"><h4>Phone number</h4></label>
-                <input placeholder="Enter your phone number" name="phone" type="tel" maxlength="40" tabindex="0">
-                <label for="address"><h4>Address to be inspected*</h4></label>
-                <input placeholder="Enter the address to be inspected*" name="address" type="text" maxlength="70" tabindex="0" required>
-                <label for="agent"><h4>Real estate agent</h4></label>
-                <input placeholder="Enter the real estate agent" name="agent" type="text" maxlength="50" tabindex="0">
+                <label for="phoneNumber"><h4>Phone number</h4></label>
+                <input placeholder="Enter your phone number" name="phoneNumber" type="tel" maxlength="40" tabindex="0">
+                <label for="inspectionAddress"><h4>Address to be inspected*</h4></label>
+                <input placeholder="Enter the address to be inspected*" name="inspectionAddress" type="text" maxlength="70" tabindex="0" required>
+                <label for="realEstateAgent"><h4>Real estate agent</h4></label>
+                <input placeholder="Enter the real estate agent" name="realEstateAgent" type="text" maxlength="50" tabindex="0">
                 <label for="details"><h4>Details</h4></label>
                 <textarea placeholder="Enter details about your inquiry" name="details" maxlength="1250" tabindex="0"></textarea>
                 <button id="contact-form" class="cta g-recaptcha" name="submit" type="submit" tabindex="0" data-sitekey="6LdKrJkUAAAAAPwj-dyxQ88IwhKIEqihVeCpatx7" data-callback='onSubmit'>Submit</button>
