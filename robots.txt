@@ -3,6 +3,8 @@ Disallow: /mailsend.php
 Noindex: /mailsend.php
 Disallow: /confirm.html
 Noindex: /confirm.html
+Disallow: /maintenance.html
+Noindex: /maintenance.html
 Disallow: /404.html
 Noindex: /404.html
 Sitemap: https://ridgevalley.ca/sitemap.xml

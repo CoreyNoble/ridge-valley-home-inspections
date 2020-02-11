@@ -34,7 +34,7 @@
     header('Location:contact.html?captcha=failed');
   } else {
     // MESSAGE PROPERTIES
-    $to = 'jruth@ridgevalley.ca';
+    $to = 'coreynoble@hotmail.ca';
     $subject = 'Inquiry - Ridge Valley Home Inspections';
 
     // USER DATA VARIABLES
@@ -60,6 +60,6 @@
     mail($to, $subject, $message);
 
     // REDIRECT TO CONFIRM
-    header('Location:confirm.html');
+    header('Location:maintenance.html');
   }
 ?>

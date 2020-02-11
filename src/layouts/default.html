@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{meta-title}}</title>
     <meta name="description" content="{{meta-description}}"/>
-    {{#ifpage 'success' 'failed'}}
+    {{#ifpage 'confirm' 'maintenance' '404' '500'}}
     <meta name="robots" content="noindex">
     {{/ifpage}}
     <link href="{{canonical}}" rel="canonical" />
