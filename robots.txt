@@ -1,0 +1,8 @@
+User-agent: *
+Disallow: /mailsend.php
+Noindex: /mailsend.php
+Disallow: /confirm.html
+Noindex: /confirm.html
+Disallow: /404.html
+Noindex: /404.html
+Sitemap: https://ridgevalley.ca/sitemap.xml

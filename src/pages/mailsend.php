@@ -24,18 +24,18 @@
   }
   if (!$captcha) {
     // REDIRECT TO CONFIRM
-    header('Location:contact.html?captcha=none&#no-captcha');
+    header('Location:contact.html?captcha=none');
     exit;
   }
 
   $response=file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=6LdKrJkUAAAAADRgsblMC4OFH-vJm4VE75gy0OC0&response=".$captcha."&remoteip=".$_SERVER['REMOTE_ADDR']);
 
   if ($response.success==false) {
-    header('Location:failed.html');
+    header('Location:contact.html?captcha=failed');
   } else {
     // MESSAGE PROPERTIES
-    $to = 'coreynoble@hotmail.ca';
-    $subject = 'Inquiry | Ridge Valley Home Inspections';
+    $to = 'jruth@ridgevalley.ca';
+    $subject = 'Inquiry - Ridge Valley Home Inspections';
 
     // USER DATA VARIABLES
     $name = $_REQUEST['name'];
@@ -48,7 +48,7 @@
     // MESSAGE STRING
     $message =
     "\n" . "\n" . "You have recieved a new inquiry from - ridgevalley.ca" .
-    "\n" . "\n" . "Name: " . "\n" . $firstName .
+    "\n" . "\n" . "Name: " . "\n" . $name .
     "\n" . "\n" . "Email Address: " . "\n" . $email .
     "\n" . "\n" . "Phone Number: " . "\n" . $phoneNumber .
     "\n" . "\n" . "Address to be Inspected: " . "\n" . $inspectionAddress .
@@ -60,6 +60,6 @@
     mail($to, $subject, $message);
 
     // REDIRECT TO CONFIRM
-    header('Location:success.html');
+    header('Location:confirm.html');
   }
 ?>

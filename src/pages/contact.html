@@ -24,23 +24,35 @@ canonical: https://ridgevalley.ca/contact.html
               <hr>
           </div>
 
-        <div id="contactForm" class="small-12 medium-6 columns">
+        <div id="contact" class="small-12 medium-6 columns">
             <h3>Send an Inquiry</h3>
+            <p id="captcha-none" class="captcha-error hide" aria-hidden="true"><em>Please validate your submission with
+              Google ReCaptcha.</em></p>
+            <p id="captcha-failed" class="captcha-error hide" aria-hidden="true"><em>You have failed Google ReCaptcha
+              validation. Please try&nbsp;again.</em></p>
+              
+            <form action="{{root}}mailsend.php" method="post">
+              <label for="name"><h4>Name*</h4></label>
+              <input name="name" type="text" maxlength="50" required />
 
-            <form id="contact" action="{{root}}mailsend.php" method="post">
-                <label for="name"><h4>Name*</h4></label>
-                <input placeholder="Enter your name*" name="name" type="text" maxlength="50" tabindex="0" required autofocus>
-                <label for="email"><h4>Email address*</h4></label>
-                <input placeholder="Enter your email address*" name="email" type="email" maxlength="70" tabindex="0" required>
-                <label for="phoneNumber"><h4>Phone number</h4></label>
-                <input placeholder="Enter your phone number" name="phoneNumber" type="tel" maxlength="40" tabindex="0">
-                <label for="inspectionAddress"><h4>Address to be inspected*</h4></label>
-                <input placeholder="Enter the address to be inspected*" name="inspectionAddress" type="text" maxlength="70" tabindex="0" required>
-                <label for="realEstateAgent"><h4>Real estate agent</h4></label>
-                <input placeholder="Enter the real estate agent" name="realEstateAgent" type="text" maxlength="50" tabindex="0">
-                <label for="details"><h4>Details</h4></label>
-                <textarea placeholder="Enter details about your inquiry" name="details" maxlength="1250" tabindex="0"></textarea>
-                <button id="contact-form" class="cta g-recaptcha" name="submit" type="submit" tabindex="0" data-sitekey="6LdKrJkUAAAAAPwj-dyxQ88IwhKIEqihVeCpatx7" data-callback='onSubmit'>Submit</button>
+              <label for="email"><h4>Email address*</h4></label>
+              <input name="email" type="text" maxlength="80" required />
+
+              <label for="phoneNumber"><h4>Phone number</h4></label>
+              <input name="phoneNumber" type="tel" maxlength="50" />
+
+              <label for="inspectionAddress"><h4>Address to be inspected*</h4></label>
+              <input name="inspectionAddress" type="text" maxlength="80" required />
+
+              <label for="realEstateAgent"><h4>Real estate agent</h4></label>
+              <input name="realEstateAgent" type="text" maxlength="80" />
+
+              <label for="details"><h4>Details</h4></label>
+              <textarea class="last" name="details" rows="5" cols="35" maxlength="3000"></textarea>
+
+              <div class="g-recaptcha" data-sitekey="6LdKrJkUAAAAAPwj-dyxQ88IwhKIEqihVeCpatx7"></div>
+
+              <input type="submit" class="cta submit-cta"  value="Submit" />
             </form>
         </div>
     </div>
