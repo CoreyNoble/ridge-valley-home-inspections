@@ -5,3 +5,4 @@ bower_components
 dist
 *.swp
 src/pages/mailsend.php
+src/pages/mail.php
